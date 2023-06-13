@@ -2,8 +2,8 @@ import streamlit as st
 import speedtest
 
 def categorize_speed(download_speed, upload_speed):
-    download_speed_mbps = download_speed / (10**6)  # converting from bits to megabits
-    upload_speed_mbps = upload_speed / (10**6)
+    download_speed_mbps = download_speed / (10**9)  # converting from bits to megabits
+    upload_speed_mbps = upload_speed / (10**9)
 
     if download_speed_mbps > 25 and upload_speed_mbps > 3:
         return "Excellent Network Speed. Sync should happen."
